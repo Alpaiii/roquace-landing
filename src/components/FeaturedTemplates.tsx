@@ -47,10 +47,13 @@ export default function FeaturedTemplates() {
               className="card group animate-slide-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="aspect-[4/3] relative overflow-hidden">
-                <div className="w-full h-full bg-framercode-cream-dark flex items-center justify-center">
-                  <span className="text-gray-400 dark:text-gray-500">Template Preview</span>
-                </div>
+              <div className="aspect-[4/3] relative overflow-hidden bg-framercode-cream-dark">
+                <img
+                  src={template.image}
+                  alt={template.name}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col gap-3">
                   <button className="btn-secondary text-sm">

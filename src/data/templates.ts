@@ -59,6 +59,16 @@ export const templates = [
     purchaseUrl: "#",
     image: "/templates/pulse.webp",
   },
+  {
+    name: "Nail Art Template",
+    category: "Beauty",
+    description: "Elegant nail art studio template for salons and beauty brands.",
+    technology: "Next.js",
+    price: "$49",
+    previewUrl: "#",
+    purchaseUrl: "#",
+    image: "/images/nail-ar-template.jpeg",
+  },
 ]
 
 export const categories = [

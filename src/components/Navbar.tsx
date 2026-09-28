@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <a href="#" className="flex items-center" aria-label="ROQUACE Home">
-            <img src="/images/Logo-white-transparant-TM.png" alt="ROQUACE" className="w-14 h-14" />
+            <img src="/images/Logo-white-transparant-TM.png" alt="ROQUACE" className="w-50 h-50" />
           </a>
 
           <div className="hidden lg:flex items-center gap-8">
