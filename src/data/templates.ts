@@ -65,7 +65,7 @@ export const templates = [
     description: "Elegant nail art studio template for salons and beauty brands.",
     technology: "Next.js",
     price: "$49",
-    previewUrl: "#",
+    previewUrl: "https://roquace-nailart.vercel.app/",
     purchaseUrl: "#",
     image: "/images/nail-ar-template.jpeg",
   },

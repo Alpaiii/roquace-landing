@@ -56,12 +56,22 @@ export default function FeaturedTemplates() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col gap-3">
-                  <button className="btn-secondary text-sm">
+                  <a
+                    href={template.previewUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary text-sm text-center"
+                  >
                     Live Preview
-                  </button>
-                  <button className="btn-primary text-sm">
+                  </a>
+                  <a
+                    href={template.purchaseUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary text-sm text-center"
+                  >
                     Get Template
-                  </button>
+                  </a>
                 </div>
               </div>
               <div className="p-6">
