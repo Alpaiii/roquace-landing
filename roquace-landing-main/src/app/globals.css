@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Switzer', 'Inter', system-ui, sans-serif;
+
+  --color-framercode-white: rgb(255, 255, 255);
+  --color-framercode-gray-5: rgb(250, 250, 250);
+  --color-framercode-gray-10: rgb(247, 247, 247);
+  --color-framercode-gray-20: rgb(240, 240, 240);
+  --color-framercode-gray-30: rgb(222, 222, 222);
+  --color-framercode-gray-40: rgb(184, 184, 184);
+  --color-framercode-gray-50: rgb(130, 130, 130);
+  --color-framercode-gray-60: rgb(84, 84, 84);
+  --color-framercode-black-90: rgb(43, 43, 43);
+  --color-framercode-black: rgb(0, 0, 0);
+  --color-framercode-navy: rgb(15, 23, 42);
+  --color-framercode-navy-light: rgb(30, 41, 59);
+  --color-framercode-navy-lighter: rgb(51, 65, 85);
+  --color-framercode-cream: rgb(255, 253, 248);
+  --color-framercode-cream-light: rgb(255, 254, 250);
+  --color-framercode-cream-dark: rgb(250, 247, 238);
+  --color-framercode-cream-darker: rgb(243, 239, 228);
+
+  --animate-fade-in: fadeIn 0.5s ease-out;
+  --animate-slide-up: slideUp 0.6s ease-out;
+  --animate-slide-down: slideDown 0.6s ease-out;
+  --animate-scale-in: scaleIn 0.4s ease-out;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes slideUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scaleIn {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+@layer base {
+  :root {
+    --framercode-white: rgb(255, 255, 255);
+    --framercode-gray-5: rgb(250, 250, 250);
+    --framercode-gray-10: rgb(247, 247, 247);
+    --framercode-gray-20: rgb(240, 240, 240);
+    --framercode-gray-30: rgb(222, 222, 222);
+    --framercode-gray-40: rgb(184, 184, 184);
+    --framercode-gray-50: rgb(130, 130, 130);
+    --framercode-gray-60: rgb(84, 84, 84);
+    --framercode-black-90: rgb(43, 43, 43);
+    --framercode-black: rgb(0, 0, 0);
+    --framercode-navy: rgb(15, 23, 42);
+    --framercode-navy-light: rgb(30, 41, 59);
+    --framercode-navy-lighter: rgb(51, 65, 85);
+    --framercode-cream: rgb(255, 253, 248);
+    --framercode-cream-light: rgb(255, 254, 250);
+    --framercode-cream-dark: rgb(250, 247, 238);
+    --framercode-cream-darker: rgb(243, 239, 228);
+  }
+
+  .dark {
+    --framercode-white: rgb(255, 255, 255);
+    --framercode-gray-5: rgb(20, 20, 20);
+    --framercode-gray-10: rgb(30, 30, 30);
+    --framercode-gray-20: rgb(40, 40, 40);
+    --framercode-gray-30: rgb(60, 60, 60);
+    --framercode-gray-40: rgb(100, 100, 100);
+    --framercode-gray-50: rgb(140, 140, 140);
+    --framercode-gray-60: rgb(180, 180, 180);
+    --framercode-black-90: rgb(220, 220, 220);
+    --framercode-black: rgb(255, 255, 255);
+    --framercode-navy: rgb(15, 23, 42);
+    --framercode-navy-light: rgb(30, 41, 59);
+    --framercode-navy-lighter: rgb(51, 65, 85);
+    --framercode-cream: rgb(25, 23, 20);
+    --framercode-cream-light: rgb(30, 28, 25);
+    --framercode-cream-dark: rgb(35, 33, 30);
+    --framercode-cream-darker: rgb(40, 38, 35);
+  }
+
+  * {
+    @apply border-gray-200 dark:border-gray-800;
+  }
+
+  body {
+    @apply bg-framercode-cream dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    @apply bg-framercode-navy text-white;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-framercode-navy dark:bg-framercode-navy rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-framercode-navy focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-gray-900 dark:text-white bg-transparent border border-gray-300 dark:border-gray-600 rounded-full transition-all duration-200 hover:bg-framercode-cream-dark dark:hover:bg-gray-800 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-framercode-navy focus-visible:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .section-title {
+    @apply font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-gray-900 dark:text-white tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-lg sm:text-xl text-gray-500 dark:text-gray-400 max-w-2xl mt-4;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-150 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-framercode-navy after:transition-all hover:after:w-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+}
